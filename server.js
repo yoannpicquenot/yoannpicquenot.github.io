@@ -10,5 +10,5 @@ server.get('*', (_, res) => {
 });
 
 server.listen(config.port, (err) => {
-  console.log(err || `Listening on port ${port}`);
+  console.log(err || `Listening on port ${config.port}`);
 });
