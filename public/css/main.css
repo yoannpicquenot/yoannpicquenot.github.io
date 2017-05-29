@@ -43,9 +43,18 @@ nav.closed > .menu-container { margin-left: -80%; }
 .card-title-date {margin-top: 0;color: rgba(0,0,0,0.3);}
 .card-subtitle {display: inline;margin-top: 0;color: rgba(0,0,0,0.6);}
 
-.mission {
-  font-style: italic;
-}
+.section-header > h1 { margin-bottom: 0; }
+.section-header > h1 > a { color: inherit; }
+.section-header > h6 { margin-top: 0; }
+.section-header { padding-top: 50px;  }
+.section-body { padding-bottom: 50px;  }
+.section-header, .section-body { padding-left: 80px; padding-right: 80px; }
+
+.internship { min-height: 33.33333%; }
+
+#business-geografic-section { background-color: #77787B; color: white; }
+#bealder-section { background-color: #2F8297; color: white; }
+#asterisque-digital-section { background-color: #FF0099; color: white; }
 
 @media screen and (max-width: 1366px) {
   .title { font-size: 3em; margin-bottom: 0px }
@@ -67,3 +76,4 @@ nav.closed > .menu-container { margin-left: -80%; }
   nav.closed > .menu-container { margin-left: -80%; }
   a.icon-hamburger { width: 5% };
 }
+
