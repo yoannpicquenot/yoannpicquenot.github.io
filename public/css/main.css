@@ -67,6 +67,16 @@ section.aboutsection {
   font-size: 1.5em;
 }
 
+footer .links {
+  /*display: block;*/
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 755px) {
   .card-wrapper {
     margin: 0px 5%;
