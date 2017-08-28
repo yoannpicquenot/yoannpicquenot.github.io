@@ -2,6 +2,11 @@ body { padding: 0; margin: 0; color: black;font-family: 'Roboto', sans-serif; }
 footer { background-color: black; color: white; padding: 50px; font-weight: bold }
 nav { width: 100%; height: 100px; }
 
+h1.title {
+  text-align: center;
+  font-size: xx-large;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -67,6 +72,52 @@ section.aboutsection {
   font-size: 1.5em;
 }
 
+/* EXPERIENCES */
+.experiencessection {
+}
+.experiencessection ul.list-experiences {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+}
+
+.experiencessection ul.list-experiences > li {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.3);
+}
+
+.experiencessection ul.list-experiences > li .job-banner {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 250ms ease-in-out;
+}
+.experiencessection ul.list-experiences > li .job-banner img {
+  width: inherit;
+}
+.experiencessection ul.list-experiences > li .job-banner.asterisque-digital img {
+  width: 80%;
+}
+
+.experiencessection ul.list-experiences > li:hover > .job-banner {
+  transform: scale(0);
+}
+
+.job-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 footer .links {
   /*display: block;*/
   color: white;
@@ -75,6 +126,22 @@ footer .links {
 
 .copyright {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 1220px) {
+  .experiencessection ul.list-experiences {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .experiencessection ul.list-experiences > li {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .experiencessection ul.list-experiences > li .job-banner {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 755px) {
@@ -88,6 +155,7 @@ footer .links {
   .card.shifted {
     margin-left: 0%;
     font-size: 1em;
+    box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.3);
   }
 }
 
