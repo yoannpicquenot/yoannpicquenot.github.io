@@ -34,6 +34,10 @@ nav ul li .underline.active {
 
 nav > ul > li:hover > .underline { width: 100%; }
 
+section {
+  margin-bottom: 50px;
+}
+
 section.aboutsection {
   padding-bottom: 100px;
   width: 100%;
@@ -128,6 +132,39 @@ footer .links {
   margin-bottom: 0;
 }
 
+.terminal-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.terminal {
+  width: 80%;
+  background-color: black;
+  color: white;
+  display: block;
+  padding: 20px;
+}
+
+ul.terminal-lines, .terminal-line ul {
+  list-style: none;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+span.cursor {
+  background-color: white;
+  height: 1px;
+  width: 10px;
+  display: inline-block;
+  animation: blinking ease-in-out infinite 750ms;
+}
+
 @media screen and (max-width: 1220px) {
   .experiencessection ul.list-experiences {
     flex-direction: column;
@@ -136,11 +173,11 @@ footer .links {
 
   .experiencessection ul.list-experiences > li {
     margin-bottom: 20px;
-    width: 100%;
+    width: 80%;
   }
 
   .experiencessection ul.list-experiences > li .job-banner {
-    width: 100%;
+    width: inherit;
   }
 }
 
