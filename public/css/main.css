@@ -1,6 +1,6 @@
 body { padding: 0; margin: 0; color: black;font-family: 'Roboto', sans-serif; }
 footer { background-color: black; color: white; padding: 50px; font-weight: bold }
-nav { width: 100%; height: 100px; }
+nav { width: 100%; position: fixed; background-color: white; top: 0; left: 0; right: 0;z-index: 999; }
 
 h1.title {
   text-align: center;
@@ -35,7 +35,13 @@ nav ul li .underline.active {
 nav > ul > li:hover > .underline { width: 100%; }
 
 section {
-  margin-bottom: 50px;
+  min-height: 100vh;
+    padding-bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 section.aboutsection {
@@ -58,7 +64,7 @@ section.aboutsection {
 .card {
   width: 100%;
   max-width: 500px;
-  box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 7px 12px -3px rgba(0,0,0,0.5);
   background-color: white;
   display: block;
   animation: all 500ms ease-in-out;
@@ -68,7 +74,12 @@ section.aboutsection {
   animation: all 500ms ease-in-out;
   margin-top: -10%;
   margin-left: 25%;
-  box-shadow: 0px 40px 70px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 14px 14px -7px rgba(0,0,0,0.5);
+}
+
+form {
+  margin: 10px;
+  display: none;
 }
 
 .description {
@@ -76,8 +87,36 @@ section.aboutsection {
   font-size: 1.5em;
 }
 
+.form-group {
+  width: 100%;
+  box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.3);
+  margin-bottom: 10px;
+}
+
+.form-group * {
+  padding: 10px;
+  width: 100%;
+  resize: none;
+  border: none;
+}
+
+.button-send-form {
+  width: 100%;
+  height: 50px;
+  background-color: orange;
+  text-transform: uppercase;
+  border: 0;
+  color: white;
+  box-shadow: 0px 14px 14px -7px rgba(0,0,0,0.5);
+}
+
+.form-message {
+  opacity: 0;
+}
+
 /* EXPERIENCES */
 .experiencessection {
+  background-color: cornflowerblue;
 }
 .experiencessection ul.list-experiences {
   display: flex;
@@ -92,6 +131,7 @@ section.aboutsection {
   width: 400px;
   display: flex;
   box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.3);
+  margin: 0px 10px;
 }
 
 .experiencessection ul.list-experiences > li .job-banner {
@@ -115,11 +155,21 @@ section.aboutsection {
   transform: scale(0);
 }
 
+.skillsection {
+  background-color: orange;
+}
+
+.contactsection {
+  background-color: #e74c3c;
+}
+
 .job-description {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 30px;
+  background-color: white;
 }
 
 footer .links {
@@ -135,6 +185,7 @@ footer .links {
 .terminal-wrapper {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .terminal {
@@ -143,12 +194,12 @@ footer .links {
   color: white;
   display: block;
   padding: 20px;
+  box-shadow: 0px 14px 14px -7px rgba(0,0,0,0.5);
 }
 
 ul.terminal-lines, .terminal-line ul {
   list-style: none;
 }
-
 @keyframes blinking {
   0% {
     opacity: 0;
@@ -163,6 +214,29 @@ span.cursor {
   width: 10px;
   display: inline-block;
   animation: blinking ease-in-out infinite 750ms;
+}
+
+a.button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2em;
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  opacity: 0;
+  transition: opacity ease-in-out 100ms;
+  cursor: pointer;
+}
+
+a.button:hover {
+  box-shadow: 0 0 6px rgba(0,0,0,.16), 0 6px 12px rgba(0,0,0,.32);
 }
 
 @media screen and (max-width: 1220px) {
@@ -197,6 +271,7 @@ span.cursor {
 }
 
 @media screen and (max-width: 500px) {
+  nav ul { display: flex; justify-content: space-around; }
   .description {
     font-size: 1em;
   }
