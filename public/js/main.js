@@ -70,7 +70,7 @@ $(document).ready(function() {
         });
         $.ajax({
             method: 'POST',
-            url: 'http://localhost:5000/email',
+            url: '/email',
             data: JSON.stringify(data),
             contentType: 'application/json'
         }).done(function(res) {

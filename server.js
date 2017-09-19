@@ -43,7 +43,7 @@ server.post('/email', function(req, res) {
             </style>
             </head>
             <body style="font-family:sans-serif;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" >
-                <h4>A notification has been send to my mailbox with these information:</h4>
+                <h4>A notification has been sent to my mailbox with these information:</h4>
                 <ul style="list-style-type:none;list-style-position:outside;list-style-image:none;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;width:100%;height:100%;" >
                     <li>First name:
                         <p style="margin-top: 0; padding-top: 0;">${ data['first_name'] }</p>
